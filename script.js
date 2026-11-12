@@ -13,11 +13,31 @@ themeToggle.addEventListener("change", () => {
   localStorage.setItem("theme", theme);
 });
 
-document.querySelectorAll(".save-button").forEach((button) => {
+const saveButtons = document.querySelectorAll(".save-button");
+const savedColumns = new Set(JSON.parse(localStorage.getItem("savedColumns") || "[]"));
+
+saveButtons.forEach((button) => {
+  const key = button.closest("[data-save-key]").dataset.saveKey;
+  const icon = button.querySelector(".save-icon");
+  const text = button.querySelector(".save-text");
+
+  const updateSaveButton = (saved) => {
+    button.classList.toggle("is-saved", saved);
+    icon.textContent = saved ? "♥" : "♡";
+    text.textContent = saved ? "Bewaard" : "Bewaar";
+  };
+
+  updateSaveButton(savedColumns.has(key));
+
   button.addEventListener("click", () => {
-    const saved = button.classList.toggle("is-saved");
-    button.querySelector("span").textContent = saved ? "Bewaard" : "Bewaar";
-    button.firstChild.textContent = saved ? "♥ " : "♡ ";
+    if (savedColumns.has(key)) {
+      savedColumns.delete(key);
+    } else {
+      savedColumns.add(key);
+    }
+
+    localStorage.setItem("savedColumns", JSON.stringify([...savedColumns]));
+    updateSaveButton(savedColumns.has(key));
   });
 });
 
@@ -25,6 +45,33 @@ const menu = document.querySelector(".site-nav");
 const search = document.querySelector(".site-search");
 const searchInput = document.querySelector(".site-search input");
 const isDesktop = window.matchMedia("(min-width: 768px)");
+const cards = document.querySelectorAll(".column-card");
+const filterButtons = document.querySelectorAll("[data-filter]");
+
+const filterCards = (filter) => {
+  cards.forEach((card) => {
+    card.hidden = filter !== "all" && card.dataset.category !== filter;
+  });
+};
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach((filterButton) => {
+      filterButton.classList.toggle("active", filterButton === button);
+    });
+
+    filterCards(button.dataset.filter);
+  });
+});
+
+search.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const term = searchInput.value.trim().toLowerCase();
+
+  cards.forEach((card) => {
+    card.hidden = Boolean(term && !card.textContent.toLowerCase().includes(term));
+  });
+});
 
 const syncMenu = ({ matches }) => {
   menu.open = matches;

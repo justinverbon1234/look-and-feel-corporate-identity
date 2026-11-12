@@ -10,9 +10,7 @@
 }
 
 .footer-inner {
-  display: grid;
-  grid-template-columns: minmax(14rem, 1fr) 2fr;
-  gap: 3rem;
+  display: block;
 }
 
 .footer-bottom {
@@ -26,24 +24,6 @@
   border-top: 1px solid rgb(255 255 255 / 30%);
   color: rgb(255 255 255 / 80%);
   font-size: 0.75rem;
-}
-
-.footer-brand {
-  max-width: 18rem;
-}
-
-.footer-logo {
-  display: inline-block;
-
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.footer-brand p {
-  margin: 1rem 0 0;
-
-  color: rgb(255 255 255 / 80%);
-  line-height: 1.5;
 }
 
 .footer-heading {
@@ -83,11 +63,6 @@
 }
 
 @media (max-width: 40rem) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .footer-nav ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -1,22 +1,17 @@
-# Corporate Identity
+# HvanA Columns
 
-Ontwerp en maak voor een opdrachtgever een website op basis van een bestaande huisstijl.
-
-De instructie vind je in: [WIKI](https://github.com/fdnd-task/look-and-feel-corporate-identity/wiki)
-
-
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
-
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Een responsive overzichtspagina voor persoonlijke columns over studeren, de HvA en alles eromheen.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
-## Bronnen
+- Semantische HTML met native `<details>`-menu's.
+- Responsive CSS met design tokens, light/dark mode en duidelijke focus-states.
+- JavaScript voor themawissel, zoeken, topicfilters en lokaal opgeslagen columns.
+- WebP-afbeeldingen, vaste afbeeldingsafmetingen en lazy loading voor content onder de vouw.
+
+## Lokaal gebruiken
+
+Open `index.html` in een browser. Er is geen buildproces of framework nodig.
 
 ## Licentie
 

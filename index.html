@@ -25,9 +25,6 @@
   <header class="site-header" id="top">
     <a href="index.html" class="logo">HvanA</a>
 
-    <!-- Navigation menu using <details> to open and close without JavaScript.
-     The <summary> contains the hamburger icon, and <nav> holds the menu links. -->
-
     <details class="site-nav" name="header">
       <summary class="header-toggle">
         <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -49,10 +46,6 @@
       </nav>
     </details>
 
-    <!-- Search menu using <details> to open and close without JavaScript.
-     The <summary> contains the search icon, and <search> holds the search form.
-     Users can enter a search term and submit it using the search button. -->
-
     <details class="site-search" name="header">
       <summary class="header-toggle">
         <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -63,9 +56,9 @@
       </summary>
 
       <search class="search-panel">
-        <form>
+        <form action="index.html">
           <label class="visually-hidden" for="search-input">Zoek in HvanA</label>
-          <input id="search-input" type="search" name="q" placeholder="Zoek in HvanA">
+          <input id="search-input" type="search" name="q" placeholder="Zoek in HvanA" autocomplete="on">
           <button type="submit">Zoek</button>
         </form>
       </search>
@@ -87,7 +80,7 @@
     </section>
 
     <!-- Nieuwste column -->
-    <article class="featured-column">
+    <article class="featured-column" data-save-key="featured">
       <p class="featured-meta">
         <span>Nieuwste</span>
         <time datetime="2026-09-23">23 sep</time>
@@ -99,12 +92,14 @@
           alt="Aynur Can op de HvA-campus"
           width="1200"
           height="804"
+          decoding="async"
+          fetchpriority="high"
         >
       </div>
 
       <div class="featured-actions">
         <button class="save-button" type="button">
-          ♡ <span>Bewaar</span>
+          <span class="save-icon">♡</span> <span class="save-text">Bewaar</span>
         </button>
       </div>
 
@@ -123,12 +118,6 @@
       </a>
     </article>
 
-    <!-- Section displaying more recent and relevant columns.
-     The heading includes a link to view all columns, followed by a short introduction.
-     A topic filter lets readers narrow the list by subject.
-     Each article card contains an image, category, title, author, and publication date.
-     The entire card is clickable, and images load lazily to improve performance. -->
-
     <section class="more-columns">
       <div class="section-heading">
         <h2 id="more-columns-title">Nieuw & relevant</h2>
@@ -143,14 +132,14 @@
         <h3>Waar wil je over lezen?</h3>
 
         <ul>
-          <li><button class="active" type="button">Alles</button></li>
-          <li><button type="button">onderwijs</button></li>
-          <li><button type="button">Studenten</button></li>
-          <li><button type="button">Tech</button></li>
+          <li><button class="active" type="button" data-filter="all">Alles</button></li>
+          <li><button type="button" data-filter="education">Onderwijs</button></li>
+          <li><button type="button" data-filter="students">Studenten</button></li>
+          <li><button type="button" data-filter="tech">Tech</button></li>
         </ul>
       </section>
 
-      <article class="column-card education">
+      <article class="column-card education" data-category="education" data-save-key="education">
         <div class="image-with-save">
           <img
             src="assets/columniste-campus.webp"
@@ -158,12 +147,13 @@
             width="1200"
             height="659"
             loading="lazy"
+            decoding="async"
           >
         </div>
 
         <div class="card-actions">
           <button class="save-button" type="button">
-            ♡ <span>Bewaar</span>
+            <span class="save-icon">♡</span> <span class="save-text">Bewaar</span>
           </button>
         </div>
 
@@ -183,7 +173,7 @@
         </a>
       </article>
 
-      <article class="column-card students">
+      <article class="column-card students" data-category="students" data-save-key="students">
         <div class="image-with-save">
           <img
             src="assets/naim-asbaa.webp"
@@ -191,12 +181,13 @@
             width="1200"
             height="667"
             loading="lazy"
+            decoding="async"
           >
         </div>
 
         <div class="card-actions">
           <button class="save-button" type="button">
-            ♡ <span>Bewaar</span>
+            <span class="save-icon">♡</span> <span class="save-text">Bewaar</span>
           </button>
         </div>
 
@@ -216,7 +207,7 @@
         </a>
       </article>
 
-      <article class="column-card tech">
+      <article class="column-card tech" data-category="tech" data-save-key="tech">
         <div class="image-with-save">
           <img
             src="assets/hva-gebouw.webp"
@@ -224,12 +215,13 @@
             width="1200"
             height="786"
             loading="lazy"
+            decoding="async"
           >
         </div>
 
         <div class="card-actions">
           <button class="save-button" type="button">
-            ♡ <span>Bewaar</span>
+            <span class="save-icon">♡</span> <span class="save-text">Bewaar</span>
           </button>
         </div>
 
@@ -251,10 +243,6 @@
     </section>
   </main>
 
-    <!-- Footer containing the HvanA logo, a short description, and navigation links.
-     The navigation provides access to information about HvanA, privacy, and other pages.
-     The bottom section displays the copyright year and a link to return to the top of the page. -->
-     
   <footer class="site-footer">
     <div class="footer-inner">
 
