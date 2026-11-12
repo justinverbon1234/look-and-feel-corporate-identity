@@ -13,6 +13,14 @@ themeToggle.addEventListener("change", () => {
   localStorage.setItem("theme", theme);
 });
 
+document.querySelectorAll(".save-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const saved = button.classList.toggle("is-saved");
+    button.querySelector("span").textContent = saved ? "Bewaard" : "Bewaar";
+    button.firstChild.textContent = saved ? "♥ " : "♡ ";
+  });
+});
+
 const menu = document.querySelector(".site-nav");
 const search = document.querySelector(".site-search");
 const searchInput = document.querySelector(".site-search input");
