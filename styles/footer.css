@@ -9,10 +9,6 @@
   outline-color: var(--white);
 }
 
-.footer-inner {
-  display: block;
-}
-
 .footer-bottom {
   display: flex;
   justify-content: space-between;

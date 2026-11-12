@@ -27,7 +27,7 @@
 
     <details class="site-nav" name="header">
       <summary class="header-toggle">
-        <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <path class="menu-line menu-line-top" d="M4 7h16" />
           <path class="menu-line menu-line-mid" d="M4 12h16" />
           <path class="menu-line menu-line-bottom" d="M4 17h16" />
@@ -48,7 +48,7 @@
 
     <details class="site-search" name="header">
       <summary class="header-toggle">
-        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" />
         </svg>
@@ -56,9 +56,9 @@
       </summary>
 
       <search class="search-panel">
-        <form action="index.html">
+        <form>
           <label class="visually-hidden" for="search-input">Zoek in HvanA</label>
-          <input id="search-input" type="search" name="q" placeholder="Zoek in HvanA" autocomplete="on">
+          <input id="search-input" type="search" name="q" placeholder="Zoek in HvanA">
           <button type="submit">Zoek</button>
         </form>
       </search>
@@ -79,23 +79,20 @@
       </p>
     </section>
 
-    <!-- Nieuwste column -->
     <article class="featured-column" data-save-key="featured">
       <p class="featured-meta">
         <span>Nieuwste</span>
         <time datetime="2026-09-23">23 sep</time>
       </p>
 
-      <div class="image-with-save">
-        <img
-          src="assets/aynur-can.webp"
-          alt="Aynur Can op de HvA-campus"
-          width="1200"
-          height="804"
-          decoding="async"
-          fetchpriority="high"
-        >
-      </div>
+      <img
+        src="assets/aynur-can.webp"
+        alt="Aynur Can op de HvA-campus"
+        width="1200"
+        height="804"
+        decoding="async"
+        fetchpriority="high"
+      >
 
       <div class="featured-actions">
         <button class="save-button" type="button">
@@ -120,7 +117,7 @@
 
     <section class="more-columns">
       <div class="section-heading">
-        <h2 id="more-columns-title">Nieuw & relevant</h2>
+        <h2>Nieuw & relevant</h2>
         <a href="#">Alles</a>
       </div>
 
@@ -158,18 +155,16 @@
         </div>
 
         <a href="#">
-          <div class="column-card-content">
-            <p class="column-category">Onderwijs</p>
+          <p class="column-category">Onderwijs</p>
 
-            <h3>
-              ‘We laten studenten samenwerken zonder ze ooit te leren hoe je dat doet’
-            </h3>
+          <h3>
+            ‘We laten studenten samenwerken zonder ze ooit te leren hoe je dat doet’
+          </h3>
 
-            <p class="column-meta">
-              Jacob Eikelboom ·
-              <time datetime="2026-09-20">20 sep</time>
-            </p>
-          </div>
+          <p class="column-meta">
+            Jacob Eikelboom ·
+            <time datetime="2026-09-20">20 sep</time>
+          </p>
         </a>
       </article>
 
@@ -192,18 +187,16 @@
         </div>
 
         <a href="#">
-          <div class="column-card-content">
-            <p class="column-category">Studenten</p>
+          <p class="column-category">Studenten</p>
 
-            <h3>
-              ‘De eerste weken voelen voor niemand zo vanzelfsprekend als ze lijken’
-            </h3>
+          <h3>
+            ‘De eerste weken voelen voor niemand zo vanzelfsprekend als ze lijken’
+          </h3>
 
-            <p class="column-meta">
-              Naïm Asbâa ·
-              <time datetime="2026-09-18">18 sep</time>
-            </p>
-          </div>
+          <p class="column-meta">
+            Naïm Asbâa ·
+            <time datetime="2026-09-18">18 sep</time>
+          </p>
         </a>
       </article>
 
@@ -226,28 +219,24 @@
         </div>
 
         <a href="#">
-          <div class="column-card-content">
-            <p class="column-category">Tech</p>
+          <p class="column-category">Tech</p>
 
-            <h3>
-              ‘Nog voordat de les is begonnen, staan de chatbots alweer aan’
-            </h3>
+          <h3>
+            ‘Nog voordat de les is begonnen, staan de chatbots alweer aan’
+          </h3>
 
-            <p class="column-meta">
-              Aynur Can ·
-              <time datetime="2026-09-15">15 sep</time>
-            </p>
-          </div>
+          <p class="column-meta">
+            Aynur Can ·
+            <time datetime="2026-09-15">15 sep</time>
+          </p>
         </a>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-
       <nav class="footer-nav">
-        <h2 id="footer-heading" class="footer-heading">HvanA</h2>
+        <h2 class="footer-heading">HvanA</h2>
 
         <ul>
           <li><a href="#">Auteurs</a></li>
@@ -261,7 +250,6 @@
           <li><a href="#">Huisregels</a></li>
         </ul>
       </nav>
-    </div>
 
     <div class="footer-bottom">
       <p>© 2026 HvanA</p>

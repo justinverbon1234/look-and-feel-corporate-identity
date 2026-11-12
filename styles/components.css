@@ -306,7 +306,7 @@
   width: 100%;
 }
 
-.featured-column .image-with-save {
+.featured-column > img {
   margin-bottom: 0.75rem;
 }
 
