@@ -1,0 +1,52 @@
+.site-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 1.25rem var(--page-padding);
+}
+
+.columns-intro {
+  padding: 2rem var(--page-padding) 1.5rem;
+}
+
+.topic-filter {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.site-header,
+.columns-intro,
+.more-columns {
+  background-color: var(--surface);
+}
+
+.topic-filter h3 {
+  margin: 0 0 0.75rem;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.topic-filter ul {
+  display: flex;
+  gap: 0.5rem;
+
+  overflow-x: auto;
+
+  padding-block: 0.25rem;
+}
+
+.topic-filter li {
+  flex-shrink: 0;
+}
+
+.featured-column {
+  padding: 1.5rem var(--page-padding);
+}
+
+.more-columns {
+  padding: 2rem var(--page-padding);
+}
